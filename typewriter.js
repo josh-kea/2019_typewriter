@@ -1,11 +1,10 @@
 "use strict";
 
-var str = document.getElementById("typewriter").innerHTML;
-var pos = 0;
-var speed = 200;
-var key1 = document.getElementById("typekey1");
-var key2 = document.getElementById("typekey2");
-var space = document.getElementById("typespace");
+const str = document.getElementById("typewriter").innerHTML;
+const pos = 0;
+const key1 = document.getElementById("typekey1");
+const key2 = document.getElementById("typekey2");
+const space = document.getElementById("typespace");
 
 console.log(str);
 
@@ -39,7 +38,7 @@ function playSpaceSound(){
 }
 
 function playKeySound(){
-    var number = Math.random();
+    const number = Math.random();
     console.log(number);
 
     if (number > 0.5) {
