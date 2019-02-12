@@ -1,10 +1,10 @@
 "use strict";
 
-const str = document.getElementById("typewriter").innerHTML;
-const pos = 0;
-const key1 = document.getElementById("typekey1");
-const key2 = document.getElementById("typekey2");
-const space = document.getElementById("typespace");
+let str = document.getElementById("typewriter").innerHTML;
+let pos = 0;
+let key1 = document.getElementById("typekey1");
+let key2 = document.getElementById("typekey2");
+let space = document.getElementById("typespace");
 
 console.log(str);
 
@@ -33,23 +33,23 @@ function getRandomSound(){
 }
 
 function playSpaceSound(){ 
-    const newSpace = space.cloneNode() // Cloning the sound, and then playing the clone in order to avoid sound cutting off
+    let newSpace = space.cloneNode() // Cloning the sound, and then playing the clone in order to avoid sound cutting off
     newSpace.play();
 }
 
 function playKeySound(){
-    const number = Math.random();
+    let number = Math.random();
     console.log(number);
 
     if (number > 0.5) {
-        const newKey1 = key1.cloneNode()
+        let newKey1 = key1.cloneNode()
         newKey1.play();
     } else {
-        const newKey2 = key2.cloneNode()
+        let newKey2 = key2.cloneNode()
         newKey2.play();
     }
 }
 
-const startBtn = document.getElementById("startBtn");
+let startBtn = document.getElementById("startBtn");
 
 startBtn.addEventListener("click", type);
